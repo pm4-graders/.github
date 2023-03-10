@@ -1,13 +1,5 @@
 # grader
 
-![GitHub last commit](https://img.shields.io/github/last-commit/pm4-graders/grader)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/pm4-graders/grader)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/pm4-graders/grader)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/pm4-graders/grader)
-![GitHub repo file count](https://img.shields.io/github/directory-file-count/pm4-graders/grader)
-![GitHub repo size](https://img.shields.io/github/repo-size/pm4-graders/grader)
-![GitHub language count](https://img.shields.io/github/languages/count/pm4-graders/grader)
-
 ### Product Documentation (Software Guidebook)
 
 ...
