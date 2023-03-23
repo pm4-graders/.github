@@ -1,0 +1,37 @@
+workspace {
+
+    model {
+        user = person "User"
+        3ES = softwareSystem "3ES" {
+            scanApp = container "Scanning App" "Delivers functionality to scan exam cover sheets" "JavaScript / VueJS" {
+                user -> this "Scans exam cover sheets with"
+            }
+            adminApp = container "Admin App" "Delivers functionality to review, approve, and export scanning results" "JavaScript / VueJS"  {
+                user -> this "Reviews and approves scanning results with"
+            }
+            restapi = container "REST API" "Handles business logic and serves as connection between user and persistent data storage" "Python Flask" {
+                scanApp -> this "Makes API calls to"
+                adminApp -> this "Makes API calls to"
+            }
+            db = container "Database" "Stores student and exam data along with scanned results" "SQLite" {
+                restapi -> this "Reads from and writes to"
+            }
+        }
+    }
+
+    views {
+
+        systemContext 3ES {
+            include *
+            autolayout lr
+        }
+
+        container 3ES {
+            include *
+            autolayout lr
+        }
+
+        theme default
+    }
+
+}
